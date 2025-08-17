@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seja bem-vindo!</title>
+  <title>Olá!</title>
   <link rel="stylesheet" href="css/styles.css">
-  <script src="script_bemvindo.js" defer></script>
+  <script src="scripts/script_landingpage.js" defer></script>
 </head>
 <body>
   <section>
     <div class="header">
-      <h1 id="saida" style="margin:0;"></h1>
+      <h1>Olá, digite o seu nome!</h1>
       <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">🌙/☀️</button>
     </div>
-    <div style="display:flex; gap:8px;">
-      <button id="botaoeditar" class="secondary">Editar</button>
-      <button id="botaosair">Sair</button> 
-    </div>
+    <form id="form">
+      <label>Nome: <input type="text" id="nome" autocomplete="name" /></label>
+      <div style="margin-top: 12px;">
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
   </section>
 </body>
 </html>
