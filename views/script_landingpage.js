@@ -1,4 +1,3 @@
-// ====== Theme handling (shared) ======
 (function() {
   const root = document.documentElement;
   const STORAGE_KEY = 'theme';
@@ -23,18 +22,15 @@
     localStorage.setItem(STORAGE_KEY, next);
   }
 
-  // expose globally so onclick and other pages can reuse if needed
   window.toggleTheme = toggleTheme;
   applyTheme(resolveInitialTheme());
 
-  // hook button
   window.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('theme-toggle');
     if (btn) btn.addEventListener('click', toggleTheme);
   });
 })();
 
-// ====== Page-specific behavior (index) ======
 const form = document.getElementById('form');
 const nome = document.getElementById('nome');
 

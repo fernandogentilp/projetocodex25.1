@@ -1,4 +1,4 @@
-// ====== Theme handling (shared) ======
+
 (function() {
   const root = document.documentElement;
   const STORAGE_KEY = 'theme';
@@ -23,18 +23,15 @@
     localStorage.setItem(STORAGE_KEY, next);
   }
 
-  // expose globally so onclick and other pages can reuse if needed
   window.toggleTheme = toggleTheme;
   applyTheme(resolveInitialTheme());
 
-  // hook button
   window.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('theme-toggle');
     if (btn) btn.addEventListener('click', toggleTheme);
   });
 })();
 
-// ====== Page-specific behavior (bem-vindo) ======
 const saida = document.getElementById('saida');
 const nome = sessionStorage.getItem('nome') || '';
 const botaoeditar = document.getElementById('botaoeditar');
