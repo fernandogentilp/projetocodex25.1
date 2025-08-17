@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seja bem-vindo!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seja bem-vindo!</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="script_bemvindo.js" defer></script>
 </head>
 <body>
-    <section>
-    <h1 id="saida"></h1>
-    <button id="botaoeditar">Editar</button>
-    <button id="botaosair">Sair</button> 
-    </section>
-    <script src="script_bemvindo.js"></script>
+  <section>
+    <div class="header">
+      <h1 id="saida" style="margin:0;"></h1>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">🌙/☀️</button>
+    </div>
+    <div style="display:flex; gap:8px;">
+      <button id="botaoeditar" class="secondary">Editar</button>
+      <button id="botaosair">Sair</button> 
+    </div>
+  </section>
 </body>
 </html>
